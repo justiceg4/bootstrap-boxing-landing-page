@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Starter Code: Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Starter Code: Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!-- Starter Code: Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- Starter Code: Custom CSS -->
+    <link rel="stylesheet" href="app.css">
+
+    <title>The Boxing Gym</title>
+  </head>
+  
+  <body>
+    <!-- here we setup our navbar
+    always satrt with navbar then we use navbar so our text can adjust to a colored ackground other white
+    after we use bg-dark to set the color of background for now, so we can see what is happening. expand-md is 
+    setting up our collapse for the burger dropdown at anything below medium breakpoint -->
+    <!-- we then call py-0, to remove(0) the padding(p) from top and bottom(y) of our navbar, using boostrap class  -->
+    <!-- fixed-top is used to set and hold navbar at the top of the page when scrolled -->
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+      <!-- nav-brand tyically used for setting up company's name on page -->
+      <a href="#" class="navbar-brand">JAB JAB JAB</a>
+      <!-- now creating our collapse button. attribute data-toggle telling it's gonna collapse something, and attribute data-target
+      is the what it's going to collapse. we then target the id from our div below (remember to place # for id)-->
+      <!-- we setup aria to geive it somewhat of defintion of what it does. Usefulness for a screenreader -->
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+        <!-- giving the icon to the button -->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- setting content for collapse button -->
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">CLASSES</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">PRICING</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- creating our grid for the text and img. container fluid goes all the way across the page unlike container class
+    , it also has it's own padding on each side which we remove with px-0 -->
+    <section class="container-fluid px-0">
+      <!-- start by creating the row and they share the space 50/50 or 6 and 6 once they hit the large breakpoint -->
+      <!-- we center items(h1 and the img) middle of our column with align-items -->
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <!-- we group them and wrap our h1s or content in a div so we easily aply classes to all of them, instead of individually -->
+          <!-- text-center is now centering in the row -->
+          <!-- content will now be hidden with d-none but once the breakpopint is large content will show with d-lg-block -->
+          <!-- trying to make slants red we then give this div and id name and point our spans in our local CSS file.
+          Less clutter instead of classing the spans -->
+          <!-- we add in mt-5 meaning margin top of 5 to give space between the headers/content and our navbar -->
+          <div id="headingGroup"class="text-white text-center d-none d-lg-block mt-5">
+            <!-- adding in spans to add in styling to a single character -->
+            <h1 class="">BOXING<span>/</span>AND<span>/</span>CONDITIONING</h1>
+            <h1 class="">BOXING<span>/</span>AND<span>/</span>CONDITIONING</h1>
+            <h1 class="">BOXING<span>/</span>AND<span>/</span>CONDITIONING</h1>
+            <h1 class="">BOXING<span>/</span>AND<span>/</span>CONDITIONING</h1>
+            <h1 class="">BOXING<span>/</span>AND<span>/</span>CONDITIONING</h1>
+            <h1 class="">BOXING<span>/</span>AND<span>/</span>CONDITIONING</h1>
+            <h1 class="">BOXING<span>/</span>AND<span>/</span>CONDITIONING</h1>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- img-fluid is a bootstrap class that makes images reponsive, makes them scale to page size -->
+          <!-- src is the location of our img. hero-img could be doing the same as img-fluid, will need to come back to this -->
+          <img class="img-fluid hero-img" src="imgs/throwback.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- repeat of section like the one above -->
+    <section class="container-fluid px-0">
+      <!-- align-items-center, centering to col -->
+      <!-- giving a random named class (content) to be selected from CSS file -->
+      <div class="row align-items-center content">
+        <!-- this time we're adding img first. at medium breakpoint they'll continue to share equal space on the page -->
+        <!-- we give this an order of 2 always, displaying second, but once it hits medium or higher it'll have and order of 1 -->
+        <div class="col-md-6 order-2 order-md-1">
+          <!-- adding our img in to our second section -->
+          <img src="imgs/gloves.jpg" alt="" class="img-fluid">
+        </div>
+        <!-- text-center, centering our text-->
+        <!-- we give this an order of 1 always, displaying first, but once it hits medium or higher it'll have and order of 2 -->
+        <div class="col-md-6 text-center order-1 order-md-2">
+          <!-- nesting a row to have 12 new units of the grid to work in -->
+          <!-- we then center our row using justify-content, another approach would be adding in div.col-1 before
+          and after our content of 10 units-->
+          <div class="row justify-content-center">
+            <!-- only using 10 of those units -->
+            <!-- once it hits large it'll use 8 out of the 12 units instead. this is for a better visual of our
+            paragraph when the page expands, it keeps our content compacted -->
+            <!-- we create a random named class blurb to help select from our CCS file -->
+            <!-- adding in margin to our bottom, mb, but only we the size is small, mb-md-0 -->
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+              <h2>BOXING AND CONDITIONING</h2>
+              <!-- adding in the lollipop icon/img -->
+              <!-- always will be hidden until we hit large on screen size using the bootstraps display classes (d)-->
+              <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
+              <!-- random text. lead just makes our content stand out a little more -->
+              <p class="lead">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, quidem fugit, quaerat numquam 
+                laboriosam rerum officia facilis reprehenderit at aut consectetur unde blanditiis cum voluptas nesciunt delectus 
+                perspiciatis accusantium accusamus.
+                Fugit debitis ipsa aliquid cumque excepturi, quibusdam temporibus nulla cupiditate eum, id amet dolorem! Repellendus 
+                temporibus nulla odit, quia veniam dignissimos est voluptates a id blanditiis reiciendis quos et natus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- duplicating above -->
+      <!-- giving a random named class (content) to be selected from CSS file -->
+      <div class="row align-items-center content">
+        <!-- text-center, centering our text-->
+        <!-- we are removing the order from this section because it's already in the order in how we want it and even page is shrunk -->
+        <div class="col-md-6 text-center">
+          <!-- nesting a row to have 12 new units of the grid to work in -->
+          <!-- we then center our row using justify-content, another approach would be adding in div.col-1 before
+          and after our content of 10 units-->
+          <div class="row justify-content-center">
+            <!-- only using 10 of those units -->
+            <!-- once it hits large it'll use 8 out of the 12 units instead. this is for a better visual of our
+            paragraph when the page expands, it keeps our content compacted -->
+            <!-- we create a random named class blurb to help select from our CCS file -->
+            <!-- adding in margin to our bottom, mb, but only we the size is small, mb-md-0 -->
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+              <h2>BOXING AND CONDITIONING</h2>
+              <!-- adding in the lollipop icon/img -->
+              <!-- always will be hidden until we hit large on screen size using the bootstraps display classes (d)-->
+              <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
+              <!-- random text. lead just makes our content stand out a little more -->
+              <p class="lead">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, quidem fugit, quaerat numquam 
+                laboriosam rerum officia facilis reprehenderit at aut consectetur unde blanditiis cum voluptas nesciunt delectus 
+                perspiciatis accusantium accusamus.
+                Fugit debitis ipsa aliquid cumque excepturi, quibusdam temporibus nulla cupiditate eum, id amet dolorem! Repellendus 
+                temporibus nulla odit, quia veniam dignissimos est voluptates a id blanditiis reiciendis quos et natus.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- swapping the image similiar to our first row -->
+        <div class="col-md-6">
+          <!-- adding our gumball img into our third section -->
+          <img src="imgs/fitness.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- duplicating our second row because we already have the setup of order created -->
+      <!-- align-items-center, centering to col -->
+      <!-- giving a random named class (content) to be selected from CSS file -->
+      <div class="row align-items-center content">
+        <!-- this time we're adding img first. at medium breakpoint they'll continue to share equal space on the page -->
+        <!-- we give this an order of 2 always, displaying second, but once it hits medium or higher it'll have and order of 1 -->
+        <div class="col-md-6 order-2 order-md-1">
+          <!-- adding our img in to our second section -->
+          <img src="imgs/bags.jpg" alt="" class="img-fluid">
+        </div>
+        <!-- text-center, centering our text-->
+        <!-- we give this an order of 1 always, displaying first, but once it hits medium or higher it'll have and order of 2 -->
+        <div class="col-md-6 text-center order-1 order-md-2">
+          <!-- nesting a row to have 12 new units of the grid to work in -->
+          <!-- we then center our row using justify-content, another approach would be adding in div.col-1 before
+          and after our content of 10 units-->
+          <div class="row justify-content-center">
+            <!-- only using 10 of those units -->
+            <!-- once it hits large it'll use 8 out of the 12 units instead. this is for a better visual of our
+            paragraph when the page expands, it keeps our content compacted -->
+            <!-- we create a random named class blurb to help select from our CCS file -->
+            <!-- adding in margin to our bottom, mb, but only we the size is small, mb-md-0 -->
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+              <h2>BOXING AND CONDITIONING</h2>
+              <!-- adding in the lollipop icon/img -->
+              <!-- always will be hidden until we hit large on screen size using the bootstraps display classes (d)-->
+              <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
+              <!-- random text. lead just makes our content stand out a little more -->
+              <p class="lead">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, quidem fugit, quaerat numquam 
+                laboriosam rerum officia facilis reprehenderit at aut consectetur unde blanditiis cum voluptas nesciunt delectus 
+                perspiciatis accusantium accusamus.
+                Fugit debitis ipsa aliquid cumque excepturi, quibusdam temporibus nulla cupiditate eum, id amet dolorem! Repellendus 
+                temporibus nulla odit, quia veniam dignissimos est voluptates a id blanditiis reiciendis quos et natus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+    <!-- Starter Code: Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- creating a script of java code for our scroll function realting to our navbar -->
+    <script>
+      // when there is a scroll event (page scroll) we are going to select or check the nav
+      $(function () {
+        // anytime the page scrolls
+        $(document).scroll(function(){
+          // $nav is just a name for a variable, using our id from our nav in html
+          // finding the navbar
+          var $nav = $("#mainNavbar");
+          // we are going to check if the top of that scroll is greater than nav height
+          // basically once we scroll pass the nav height, we'll then toggle our class scrolled in our local CSS file
+          $nav.toggleClass("scrolled",$(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
+
+  </body>
+</html>

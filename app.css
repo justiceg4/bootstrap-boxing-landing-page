@@ -1,0 +1,98 @@
+/* selector: all body */
+body {
+    /* setting background color of our page */
+    background: #111827;
+    /* changing font in our body, to google font that he has linked in the html */
+    font-family: "Nunito", sans-serif;
+}
+/* selector: all h2's inside of blurb class */
+.blurb h2{
+    /* change of color */
+    color: #ef4444;
+    /* change of boldness of a font to being thinner */
+    font-weight: 100;
+    /* change of font size, rem so it's being adjusted according to screen size */
+    font-size: 2.5rem;
+}
+/* selector: all p's inside of blurb class */
+.blurb p{
+    /* change of color */
+    color: #d1d5db;
+    /* change of boldness of a font to being thinner */
+    font-weight: 100;
+    /* change of font size, rem so it's being adjusted according to screen size */
+    font-size: 1.125rem;
+    /* spacing between our lines within paragraph */
+    line-height: 2;
+}
+/* selector: pointing only to content class. which would e our rows */
+.content{
+    /* giving our rows a margin top of spacing of a 100px */
+    margin-top: 100px;
+    /* last thing we added to our page, to give some space at the bottom of each section*/
+    margin-bottom: 100px;
+}
+
+/* creating a class to help with my image, used from Chatgpt, I will need to come back to this */
+.hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* here we now adjust everything in our navbar main to what is set below and avoid
+having to adjust it individually with separting out the nav-items. Efficient, Less code*/
+#mainNavbar {
+    /* change of font size, rem so it's being adjusted according to screen size */
+    font-size: 1.5rem;
+    /* change of boldness of a font to being thinner */
+    font-weight: 100;
+}
+/* nested selector, pointing to only the nav names classed nav-link */
+#mainNavbar .nav-link {
+    /* change of color */
+    color: white;
+}
+/* pseudo selector for hover, when we hover these names color will change */
+#mainNavbar .nav-link:hover {
+    /* change of color */
+    color: #ef4444;
+}
+/* nested selector, to our brand name main */
+#mainNavbar .navbar-brand {
+    /* change of color */
+    color: #ef4444; 
+    /* change of font size, rem so it's being adjusted according to screen size */
+    font-size: 1.5rem;
+}
+/* using id of our div and pointing to all spans within it */
+#headingGroup span{
+    /* change of color */
+    color:#ef4444;
+}
+/* using id of our div and pointing to all h1s within it */
+#headingGroup h1{
+    /* change of boldness of a font to being thinner */
+    font-weight: 100;
+    /* change of font size, rem so it's being adjusted according to screen size.
+    trial and error till 4 was a good size to use */
+    font-size: 3.5rem;
+}
+
+/* defining a class for the background of our navbar when scrolled */
+.navbar.scrolled {
+    background: #1f2937;
+    /* when the background property changes, it'll take 500 miliseconds, could also use seconds(s) */
+    transition: background 500ms;
+}
+
+/* selectively apply styles based off different screen sizes */
+/* here we select 1260px b/c that's where our image starts to overlap our header content */
+@media (max-width: 1260px) {
+    /* this selector or headers will be adjusted once the page hits 1260px or below. We are adjusting this according
+    to the page size b/c of image */
+    #headingGroup h1{
+        font-weight: 100;
+        font-size: 2.5rem;
+    } 
+}
